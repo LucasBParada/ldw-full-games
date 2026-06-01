@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>LDW Merge Skills API</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-950 text-white">
+
+  <!-- HEADER -->
+  <header class="text-center py-10 border-b border-gray-800">
+    <h1 class="text-4xl font-bold text-blue-400">
+      LDW Merge Skills API
+    </h1>
+    <p class="text-gray-300 mt-2">
+      Sistema completo de gerenciamento de Hosts, Games e Players
+    </p>
+  </header>
+
+  <!-- SOBRE -->
+  <section class="max-w-4xl mx-auto p-6 mt-10 bg-gray-900 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-semibold text-blue-300 mb-3">📌 Sobre o Projeto</h2>
+
+    <p class="text-gray-300 leading-relaxed">
+      Este projeto é uma API REST desenvolvida com Flask + SQLAlchemy, conectada a um banco MySQL.
+      Ele permite o gerenciamento de Hosts (empresas), Games e Players através de rotas HTTP GET e POST.
+    </p>
+  </section>
+
+  <!-- TECNOLOGIAS -->
+  <section class="max-w-4xl mx-auto p-6 mt-6 bg-gray-900 rounded-xl">
+    <h2 class="text-2xl font-semibold text-blue-300 mb-3">⚙️ Tecnologias Utilizadas</h2>
+
+    <ul class="grid grid-cols-2 gap-2 text-gray-300">
+      <li>✔ Python 3.14</li>
+      <li>✔ Flask</li>
+      <li>✔ SQLAlchemy</li>
+      <li>✔ MySQL</li>
+      <li>✔ Flasgger (Swagger)</li>
+      <li>✔ HTTP REST API</li>
+      <li>✔ Flet (Frontend Desktop)</li>
+      <li>✔ UV (gerenciador de dependências)</li>
+    </ul>
+  </section>
+
+  <!-- ROTAS -->
+  <section class="max-w-4xl mx-auto p-6 mt-6 bg-gray-900 rounded-xl">
+    <h2 class="text-2xl font-semibold text-blue-300 mb-3">🔗 Rotas da API</h2>
+
+    <div class="space-y-3 text-gray-300">
+
+      <div>
+        <p class="font-bold text-white">GET /hosts</p>
+        <p>Lista todas as empresas host</p>
+      </div>
+
+      <div>
+        <p class="font-bold text-white">POST /hosts</p>
+        <p>Cria uma nova empresa</p>
+      </div>
+
+      <div>
+        <p class="font-bold text-white">GET /games</p>
+        <p>Lista todos os jogos</p>
+      </div>
+
+      <div>
+        <p class="font-bold text-white">POST /games</p>
+        <p>Cria um novo jogo vinculado a um host</p>
+      </div>
+
+      <div>
+        <p class="font-bold text-white">GET /players</p>
+        <p>Lista todos os jogadores</p>
+      </div>
+
+      <div>
+        <p class="font-bold text-white">POST /players</p>
+        <p>Cria novos jogadores vinculados a um game</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXECUÇÃO -->
+  <section class="max-w-4xl mx-auto p-6 mt-6 bg-gray-900 rounded-xl">
+    <h2 class="text-2xl font-semibold text-blue-300 mb-3">🚀 Como Executar o Projeto</h2>
+
+    <pre class="bg-black p-4 rounded-lg text-green-400 overflow-x-auto">
+
+# Backend
+cd apps/backend
+uv run flask --app src/app run
+
+# Frontend (Flet)
+cd apps/frontend
+uv run python main.py
+
+# Instalar dependências (UV)
+uv sync
+    </pre>
+  </section>
+
+  <!-- UV -->
+  <section class="max-w-4xl mx-auto p-6 mt-6 mb-10 bg-gray-900 rounded-xl">
+    <h2 class="text-2xl font-semibold text-blue-300 mb-3">📦 Gerenciador de Dependências</h2>
+
+    <p class="text-gray-300">
+      Este projeto utiliza <span class="text-blue-400 font-bold">uv</span> no lugar de pip para gerenciamento de dependências,
+      proporcionando instalação mais rápida e eficiente.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 border-t border-gray-800 text-gray-500">
+    LDW Merge Skills API • Projeto Full Stack Flask + Flet
+  </footer>
+
+</body>
+</html>

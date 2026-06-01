@@ -1,0 +1,8 @@
+[project]
+name = "full-games-frontend"
+version = "0.1.0"
+
+dependencies = [
+    "flet>=0.28.0",
+    "httpx>=0.28.1"
+]
