@@ -1,45 +1,61 @@
-📘 LDW Merge Skills API
+# 📘 LDW Merge Skills API
 
-Sistema full stack para gerenciamento de Hosts (empresas), Games e Players, desenvolvido com Flask + SQLAlchemy + MySQL no backend e Flet (Python UI) no frontend.
+Sistema full stack para gerenciamento de **Hosts (empresas), Games e Players**, desenvolvido com **Flask + SQLAlchemy + MySQL** no backend e **Flet (Python UI)** no frontend.
 
-🚀 Tecnologias Utilizadas
-Backend
-Python 3.14
-Flask
-SQLAlchemy (ORM)
-MySQL
-Flasgger (Swagger UI)
-HTTP REST API
-Frontend
-Flet (UI em Python)
-HTTPX (consumo da API)
-Ferramentas
-UV (gerenciador de dependências)
-Tailwind CSS (Landing Page)
-📁 Estrutura do Projeto
+---
+
+## 🚀 Tecnologias Utilizadas
+
+### Backend
+- Python 3.14
+- Flask
+- SQLAlchemy (ORM)
+- MySQL
+- Flasgger (Swagger UI)
+- HTTP REST API
+
+### Frontend
+- Flet (Python UI Framework)
+- HTTPX (consumo da API)
+
+### Ferramentas
+- UV (gerenciador de dependências)
+- Tailwind CSS (Landing Page)
+
+---
+
+## 📁 Estrutura do Projeto
+
+
 full-games/
 │
 ├── apps/
-│   ├── backend/
-│   │   └── src/
-│   │       ├── app.py
-│   │       ├── database.py
-│   │       ├── models/
-│   │       └── routes/
-│   │
-│   └── frontend/
-│       ├── main.py
-│       ├── src/
-│       │   ├── api.py
-│       │   ├── views/
-│       │   └── components/
+│ ├── backend/
+│ │ └── src/
+│ │ ├── app.py
+│ │ ├── database.py
+│ │ ├── models/
+│ │ └── routes/
+│ │
+│ └── frontend/
+│ ├── main.py
+│ ├── src/
+│ │ ├── api.py
+│ │ ├── views/
+│ │ └── components/
 │
 ├── landing/
-│   └── index.html
+│ └── index.html
 │
 └── README.md
-⚙️ Como Executar o Projeto
-1. Clonar o repositório
+
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### 1. Clonar o repositório
+```bash
 git clone https://github.com/seu-usuario/ldw-merge-skills.git
 cd full-games
 2. Backend (Flask API)
@@ -51,16 +67,15 @@ uv sync
 # rodar aplicação
 uv run flask --app src/app run
 
-API disponível em:
+📍 API:
 
 http://127.0.0.1:5000
 
-Swagger:
+📘 Swagger:
 
 http://127.0.0.1:5000/apidocs/
 3. Frontend (Flet)
 cd apps/frontend
-
 uv run python main.py
 📌 Funcionalidades
 🏢 Hosts
@@ -74,42 +89,41 @@ Criar players vinculados a games
 Listar players
 🔗 Rotas da API
 Hosts
-GET /hosts/ → Lista hosts
-POST /hosts/ → Cria host
+GET /hosts/
+POST /hosts/
 Games
-GET /games/ → Lista games
-POST /games/ → Cria game
+GET /games/
+POST /games/
 Players
-GET /players/ → Lista players
-POST /players/ → Cria player
+GET /players/
+POST /players/
 Health
-GET /health/ → Status da API
-🧠 Observações Técnicas
-Banco relacional com foreign keys
-Relacionamentos:
+GET /health/
+🧠 Arquitetura
+API REST com Flask
+ORM com SQLAlchemy
+Banco MySQL com relacionamento:
 Host → Games
 Game → Players
-Uso de SQLAlchemy ORM
-Validações básicas em POST
-Estrutura modular com Blueprints
-📦 Gerenciador de Dependências
+Frontend desktop com Flet
+Comunicação via HTTPX
+📦 Gerenciamento de dependências
 
-Este projeto utiliza uv no lugar de pip:
+Este projeto utiliza uv:
 
 uv sync
 🎨 Landing Page
 
-Interface estática em HTML + Tailwind:
+Página estática com Tailwind CSS contendo:
 
-Nome do projeto
-Descrição
-Tecnologias
+Descrição do sistema
+Tecnologias utilizadas
 Rotas da API
 Instruções de execução
 ⚠️ Problemas comuns
 ❌ 308 Redirect
 
-Use sempre:
+Sempre usar barra final:
 
 /hosts/
 /games/
@@ -117,3 +131,7 @@ Use sempre:
 ❌ Foreign Key Error
 
 O host_id precisa existir antes de criar um game.
+
+👨‍💻 Autor
+
+Lucas Parada
